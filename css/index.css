@@ -1,0 +1,130 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  background: blue;
+  min-height: 100vh;
+}
+
+* body .wrapper {
+  margin: 20px auto;
+  max-width: 1000px;
+  border: 1px solid black;
+  min-height: 100vh;
+  border-radius: 10px 0 10px 0;
+  background: #5a5858;
+}
+
+* body .wrapper #changeColor {
+  padding: 5px 10px;
+  margin: 2px 3px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+* body .wrapper .title {
+  cursor: pointer;
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto 20px auto;
+  background: green;
+  height: 40px;
+  width: 80%;
+  color: orange;
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 3px #222020;
+          box-shadow: 3px 3px #222020;
+}
+
+* body .wrapper .title p {
+  font-weight: 100;
+}
+
+* body .wrapper .container {
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
+}
+
+* body .wrapper .container .txtb {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  background: none;
+  padding: 10px;
+  outline: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+* body .wrapper .container .notcomp {
+  margin-top: 10px;
+  background: green;
+  border-radius: 10px 0 10px 0;
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+* body .wrapper .container .notcomp h3 {
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+* body .wrapper .container .notcomp .task {
+  width: 95%;
+  background: orange;
+  padding: 10px;
+  margin: 5px auto;
+  overflow: scroll;
+}
+
+* body .wrapper .container .notcomp .task i {
+  float: right;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+* body .wrapper .container .comp {
+  margin-top: 20px;
+  background: orangered;
+  border-radius: 10px 0 10px 0;
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+* body .wrapper .container .comp h3 {
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+* body .wrapper .container .comp .task {
+  width: 95%;
+  background: #363535;
+  color: white;
+  padding: 10px;
+  margin: 5px auto;
+  overflow: scroll;
+}
+
+* body .wrapper .container .comp .task i {
+  float: right;
+  margin-left: 20px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=index.css.map */

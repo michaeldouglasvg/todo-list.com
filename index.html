@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do app</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <button id="changeColor">Change Background</button>
+        <div class="title">
+            <p>MY TODO LIST</p>
+        </div>
+        <div class="container">
+            <input type="text" class="txtb" placeholder="add text here">
+            <div class="notcomp">
+                <h3>Not Completed</h3>
+            </div>
+    
+            <div class="comp">
+                <h3>completed</h3>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            var colors = ["purple", "white"];
+            var randColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            $('#changeColor').click(function() {
+                $('.wrapper').css('background', randColor);
+                
+        });
+
+            $(".txtb").on("keyup", function(e){
+            if(e.keyCode == 13 && $("txtb").val() !== "false"){
+                var task = $("<div class='task'></div>").text($(".txtb").val());
+                var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
+                    var p = $(this).parent();
+                    p.fadeOut(function() {
+                        p.remove();
+                    });
+                });
+
+                var check = $("<i class='fas fa-check'></i>").click(function(){
+                    var p = $(this).parent();
+                    p.fadeOut(function(){
+                        $(".comp").append(p);
+                        p.fadeIn();
+                    })
+                    $(this).remove();
+                })
+
+                task.append(del, check);
+                $(".notcomp").append(task);
+                $(".txtb").val(" ");
+            }
+        });
+    });
+        
+    </script>
+    
+</body>
+</html>

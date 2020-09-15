@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    body{
+        background: blue;
+        min-height: 100vh;
+        .wrapper{
+            margin: 20px auto;
+            max-width: 1000px;
+            border: 1px solid black;
+            min-height: 100vh;
+            border-radius: 10px 0 10px 0;
+            background: rgb(90, 88, 88);
+            #changeColor{
+                padding: 5px 10px;
+                margin: 2px 3px;
+                background: black;
+                color: white;
+                cursor: pointer;
+            }
+            .title{
+                cursor: pointer;
+                max-width: 500px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px auto 20px auto;
+                background: green;
+                height: 40px;
+                width: 80%;
+                color: orange;
+                border-radius: 15px;
+                box-shadow: 3px 3px  rgb(34, 32, 32);
+                p{
+                    font-weight: 100;
+                }
+            }
+    
+            .container{
+                max-width: 800px;
+                margin: auto;
+                padding: 10px;
+    
+                .txtb{
+                    width: 100%;
+                    border: none;
+                    border-bottom: 2px solid black;
+                    background: none;
+                    padding: 10px;
+                    outline: none; 
+                    color: black;
+                    font-size: 1.2rem;
+                    
+                }
+                .notcomp{
+                    margin-top: 10px;
+                    background: green;
+                    border-radius: 10px 0 10px 0;
+                    max-height: 50vh;
+                    overflow-y: scroll;
+                    h3{
+                       margin: 10px 0; 
+                       text-align: center;
+                       cursor: pointer;
+                    }
+                    .task{
+                        width: 95%;
+                        background: orange;
+                        padding: 10px;
+                        margin: 5px auto;
+                        overflow: scroll;
+                        i{
+                            float: right;
+                            margin-left: 20px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .comp{
+                    margin-top: 20px;
+                    background: orangered;
+                    border-radius: 10px 0 10px 0;
+                    max-height: 50vh;
+                    overflow-y: scroll;
+                    h3{
+                        margin: 10px 0;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                    .task{
+                        width: 95%;
+                        background: rgb(54, 53, 53);
+                        color: white;
+                        padding: 10px;
+                        margin: 5px auto;
+                        overflow: scroll;
+                        i{
+                            float: right;
+                            margin-left: 20px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }    
+        }
+
+    }
+}
