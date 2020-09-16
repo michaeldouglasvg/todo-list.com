@@ -10,8 +10,8 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <button id="changeColor">Change Background</button>
+    <div class="wrapper" class="inverted">
+        <button id="change-color" onclick="changeColor()">Change Background</button>
         <div class="title">
             <p>MY TODO LIST</p>
         </div>
@@ -26,44 +26,7 @@
             </div>
         </div>
     </div>
-    
-    <script>
-        $(document).ready(function() {
-            var colors = ["purple", "white"];
-            var randColor = colors[Math.floor(Math.random() * colors.length)];
-            
-            $('#changeColor').click(function() {
-                $('.wrapper').css('background', randColor);
-                
-        });
-
-            $(".txtb").on("keyup", function(e){
-            if(e.keyCode == 13 && $("txtb").val() !== "false"){
-                var task = $("<div class='task'></div>").text($(".txtb").val());
-                var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
-                    var p = $(this).parent();
-                    p.fadeOut(function() {
-                        p.remove();
-                    });
-                });
-
-                var check = $("<i class='fas fa-check'></i>").click(function(){
-                    var p = $(this).parent();
-                    p.fadeOut(function(){
-                        $(".comp").append(p);
-                        p.fadeIn();
-                    })
-                    $(this).remove();
-                })
-
-                task.append(del, check);
-                $(".notcomp").append(task);
-                $(".txtb").val(" ");
-            }
-        });
-    });
-        
-    </script>
-    
+    <script src="js/app.js"></script>
+    <script src="js/jquery.js"></script>
 </body>
 </html>

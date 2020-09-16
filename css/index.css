@@ -17,10 +17,10 @@
   border: 1px solid black;
   min-height: 100vh;
   border-radius: 10px 0 10px 0;
-  background: #5a5858;
+  background: white;
 }
 
-* body .wrapper #changeColor {
+* body .wrapper #change-color {
   padding: 5px 10px;
   margin: 2px 3px;
   background: black;
@@ -67,7 +67,7 @@
   background: none;
   padding: 10px;
   outline: none;
-  color: black;
+  color: green;
   font-size: 1.2rem;
 }
 
@@ -126,5 +126,15 @@
   float: right;
   margin-left: 20px;
   cursor: pointer;
+}
+
+.dark-mode {
+  -webkit-filter: invert(1) hue-rotate(180deg);
+          filter: invert(1) hue-rotate(180deg);
+}
+
+.invert {
+  -webkit-filter: invert(1) hue-rotate(180deg);
+          filter: invert(1) hue-rotate(180deg);
 }
 /*# sourceMappingURL=index.css.map */

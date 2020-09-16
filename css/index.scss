@@ -12,8 +12,8 @@
             border: 1px solid black;
             min-height: 100vh;
             border-radius: 10px 0 10px 0;
-            background: rgb(90, 88, 88);
-            #changeColor{
+            background: white;
+            #change-color{
                 padding: 5px 10px;
                 margin: 2px 3px;
                 background: black;
@@ -50,7 +50,7 @@
                     background: none;
                     padding: 10px;
                     outline: none; 
-                    color: black;
+                    color: green;
                     font-size: 1.2rem;
                     
                 }
@@ -107,4 +107,10 @@
         }
 
     }
+}
+.dark-mode{
+    filter: invert(1) hue-rotate(180deg);
+}
+.invert{
+    filter: invert(1) hue-rotate(180deg);
 }
