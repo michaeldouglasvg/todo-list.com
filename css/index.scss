@@ -11,6 +11,14 @@ $tablets: 420px;
     }
 }
 
+$desktop: 920px;
+
+@mixin desktop {
+    @media (min-width: #{$tablets}) {
+      @content;
+    }
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -43,6 +51,21 @@ $tablets: 420px;
                     to{ width: 90%;}
                 }
             }
+            @include desktop{
+                z-index: -1;
+                position: fixed;
+                overflow: hidden;
+                top: 10px;
+                right: 20%;
+                width: 30px;
+                height: 35px;
+                background: green;
+                border-radius: 15px;
+                @keyframes fade{
+                    from{ width: 30px;}
+                    to{ width: 50%;}
+                }
+            }
             .input{
                 margin-top: 8px;
                 padding: 3px 5px;
@@ -65,6 +88,15 @@ $tablets: 420px;
                 color: orangered;
                 padding: 10px;
                 z-index: 1;
+                @include desktop{
+                    position: fixed;
+                    top: 10px;
+                    right: 20%;
+                    color: orangered;
+                    padding: 10px;
+                    z-index: 1;
+
+                }
             }
         }
         .wrapper{
@@ -93,6 +125,17 @@ $tablets: 420px;
                 cursor: pointer;
                 outline-style: none;
                 box-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+                @include desktop{
+                    position: absolute;
+                    right: 20%;
+                    padding: 5px 10px;
+                    margin: 2px 3px;
+                    background: green;
+                    color: white;
+                    cursor: pointer;
+                    outline-style: none;
+                    box-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+                }
             }
             .title{
                 cursor: pointer;
