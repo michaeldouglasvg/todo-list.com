@@ -10,9 +10,10 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <style>
         .search{
-            position: absolute;
+            z-index: -1;
+            position: fixed;
             overflow: hidden;
-            top: 3px;
+            top: 10px;
             right: 20px;
             width: 30px;
             height: 35px;
@@ -29,7 +30,7 @@
         }
             .search i{
             position: fixed;
-            top: 23px;
+            top: 10px;
             right: 17px;
             color: orangered;
             padding: 10px;
@@ -45,13 +46,12 @@
     </style>
 </head>
 <body>
-    
+    <div class="search">
+        <input type="text" placeholder="Search task..." class="input">
+        <i class="fas fa-search"></i>
+      </div>
     <div class="wrapper" class="inverted">
         <button id="change-color" onclick="changeColor()">Change Background</button>
-        <div class="search">
-            <input type="text" placeholder="Search task..." class="input">
-            <i class="fas fa-search"></i>
-          </div>
         <div class="title">
             <p>MY TODO LIST</p>
         </div>
