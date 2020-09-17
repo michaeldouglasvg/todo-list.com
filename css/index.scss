@@ -2,6 +2,13 @@ $colors:(
     header:white, home: blue, uppercard: purple, card: pink,
     container: rgb(27, 25, 25), aside: blue, footer: black
 );
+$mobile:110px ;
+
+@mixin mobile {
+    @media (min-width: #{$mobile}) {
+      @content;
+    }
+}
 
 $tablets: 420px;
 
@@ -14,7 +21,7 @@ $tablets: 420px;
 $desktop: 920px;
 
 @mixin desktop {
-    @media (min-width: #{$tablets}) {
+    @media (min-width: #{$desktop}) {
       @content;
     }
 }
@@ -45,6 +52,12 @@ $desktop: 920px;
                 from{ width: 30px;}
                 to{ width: 60%;}
             }
+            @include mobile{
+                @keyframes fade{
+                    from{ width: 30px;}
+                    to{ width: 90%;}
+                }
+            }
             @include tablets{
                 @keyframes fade{
                     from{ width: 30px;}
@@ -63,7 +76,7 @@ $desktop: 920px;
                 border-radius: 15px;
                 @keyframes fade{
                     from{ width: 30px;}
-                    to{ width: 50%;}
+                    to{ width: 40%;}
                 }
             }
             .input{
@@ -75,9 +88,12 @@ $desktop: 920px;
                 outline-style: none;
                 background: green;
                 color: black;
+                @include mobile{
+                    width: 85%;
+                }
                 @include tablets{
                     width: 90%;
-                    padding: 3px 5px;
+                    padding: 3px 3px;
                     margin-left: 10px;
                 }
             }
