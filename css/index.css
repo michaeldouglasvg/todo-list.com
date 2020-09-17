@@ -13,6 +13,88 @@
   position: relative;
 }
 
+* body .search {
+  z-index: -1;
+  position: fixed;
+  overflow: hidden;
+  top: 10px;
+  right: 20px;
+  width: 30px;
+  height: 35px;
+  background: green;
+  border-radius: 15px;
+}
+
+* body .search:hover {
+  -webkit-animation: fade 1s ease forwards;
+          animation: fade 1s ease forwards;
+}
+
+@-webkit-keyframes fade {
+  from {
+    width: 30px;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes fade {
+  from {
+    width: 30px;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@media (min-width: 420px) {
+  @-webkit-keyframes fade {
+    from {
+      width: 30px;
+    }
+    to {
+      width: 90%;
+    }
+  }
+  @keyframes fade {
+    from {
+      width: 30px;
+    }
+    to {
+      width: 90%;
+    }
+  }
+}
+
+* body .search .input {
+  margin-top: 8px;
+  padding: 3px 5px;
+  margin-left: 10px;
+  width: 60%;
+  border: none;
+  outline-style: none;
+  background: green;
+  color: black;
+}
+
+@media (min-width: 420px) {
+  * body .search .input {
+    width: 90%;
+    padding: 3px 5px;
+    margin-left: 10px;
+  }
+}
+
+* body .search i {
+  position: fixed;
+  top: 10px;
+  right: 17px;
+  color: orangered;
+  padding: 10px;
+  z-index: 1;
+}
+
 * body .wrapper {
   z-index: 1;
   margin: 100px auto;
@@ -29,6 +111,20 @@
   background: black;
   color: white;
   cursor: pointer;
+  outline-style: hidden;
+}
+
+* body .wrapper #sort {
+  position: absolute;
+  right: 10px;
+  padding: 5px 10px;
+  margin: 2px 3px;
+  background: green;
+  color: white;
+  cursor: pointer;
+  outline-style: none;
+  -webkit-box-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+          box-shadow: 1px 1px rgba(0, 0, 0, 0.8);
 }
 
 * body .wrapper .title {
@@ -172,7 +268,7 @@
   text-align: center;
   font-size: 20px;
   cursor: pointer;
-  color: black;
+  color: white;
   margin-top: 10px;
 }
 

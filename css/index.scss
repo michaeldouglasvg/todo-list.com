@@ -1,3 +1,16 @@
+$colors:(
+    header:white, home: blue, uppercard: purple, card: pink,
+    container: rgb(27, 25, 25), aside: blue, footer: black
+);
+
+$tablets: 420px;
+
+@mixin tablets {
+    @media (min-width: #{$tablets}) {
+      @content;
+    }
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -7,6 +20,53 @@
         background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
         min-height: 100vh;
         position: relative;
+        .search{
+            z-index: -1;
+            position: fixed;
+            overflow: hidden;
+            top: 10px;
+            right: 20px;
+            width: 30px;
+            height: 35px;
+            background: green;
+            border-radius: 15px;
+            &:hover{
+                animation: fade 1s ease forwards;
+            }
+            @keyframes fade{
+                from{ width: 30px;}
+                to{ width: 60%;}
+            }
+            @include tablets{
+                @keyframes fade{
+                    from{ width: 30px;}
+                    to{ width: 90%;}
+                }
+            }
+            .input{
+                margin-top: 8px;
+                padding: 3px 5px;
+                margin-left: 10px;
+                width: 60%;
+                border: none;
+                outline-style: none;
+                background: green;
+                color: black;
+                @include tablets{
+                    width: 90%;
+                    padding: 3px 5px;
+                    margin-left: 10px;
+                }
+            }
+            i{
+                position: fixed;
+                top: 10px;
+                right: 17px;
+                color: orangered;
+                padding: 10px;
+                z-index: 1;
+            }
+        }
         .wrapper{
             z-index: 1;
             margin: 100px auto;
@@ -21,6 +81,18 @@
                 background: black;
                 color: white;
                 cursor: pointer;
+                outline-style: hidden;
+            }
+            #sort{
+                position: absolute;
+                right: 10px;
+                padding: 5px 10px;
+                margin: 2px 3px;
+                background: green;
+                color: white;
+                cursor: pointer;
+                outline-style: none;
+                box-shadow: 1px 1px rgba(0, 0, 0, 0.8);
             }
             .title{
                 cursor: pointer;
@@ -137,7 +209,7 @@
                 text-align: center;
                 font-size: 20px;
                 cursor: pointer;
-                color: black;
+                color: white;
                 margin-top: 10px;
                 &:hover{
                     color: orange;
