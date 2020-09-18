@@ -32,5 +32,26 @@ $(document).ready(function() {
 
           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
-      });
+    });
+
+    $("#sort").click(function() {
+        var all = $(".task").length;
+        var flag;
+        var temp = 0;
+        prompt("The button program not yet activated, press ok, when you leave a message, cancel if you ignore");
+        for(var i = 0; i < all - 1; i++){
+            flag = 0;
+            for(var j = 0; j < all - 1 -i; j++){
+                if(all[j] > all[j+1]){
+                    temp = all[j];
+                    all[j] = all[j + 1];
+                    all[j + 1] = temp;
+                    flag = 1;
+                }
+            }
+            if(flag == 0){
+                break;
+            }
+        }
+    })
 });
