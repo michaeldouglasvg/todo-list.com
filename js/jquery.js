@@ -38,7 +38,7 @@ $(document).ready(function() {
         var all = $(".task").length;
         var flag;
         var temp = 0;
-        prompt("The button program not yet activated, press ok, when you leave a message, cancel if you ignore");
+        prompt("The button program not yet activated, press ok, when you leave a message, cancel to ignore. Thanks for your visit.");
         for(var i = 0; i < all - 1; i++){
             flag = 0;
             for(var j = 0; j < all - 1 -i; j++){
