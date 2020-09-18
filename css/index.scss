@@ -2,6 +2,11 @@ $colors:(
     header:white, home: blue, uppercard: purple, card: pink,
     container: rgb(27, 25, 25), aside: blue, footer: black
 );
+// $assetPath : "./images/download.jpg";
+// //Functions
+// @function get-path-to-assets($assetPath){
+//   @return $assetPath;
+// }
 $mobile:110px ;
 
 @mixin mobile {
@@ -32,7 +37,7 @@ $desktop: 920px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-sizing: border-box;
     body{
-        background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        background: blue;
         min-height: 100vh;
         position: relative;
         .search{
