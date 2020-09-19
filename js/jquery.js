@@ -38,7 +38,7 @@ $(document).ready(function() {
         var all = $(".task").length;
         var flag;
         var temp = 0;
-        alert("The button program not yet activated, press ok, when you leave a message, cancel to ignore. Thanks welcome again.");
+        alert("Button under maintainance, you are welcome.");
         for(var i = 0; i < all - 1; i++){
             flag = 0;
             for(var j = 0; j < all - 1 -i; j++){
