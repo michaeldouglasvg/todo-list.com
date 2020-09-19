@@ -38,7 +38,7 @@ $(document).ready(function() {
         var all = $(".task").length;
         var flag;
         var temp = 0;
-        alert("Button under maintainance, you are welcome.");
+        alert("Oops!! button under maintainance, you are welcome.");
         for(var i = 0; i < all - 1; i++){
             flag = 0;
             for(var j = 0; j < all - 1 -i; j++){
