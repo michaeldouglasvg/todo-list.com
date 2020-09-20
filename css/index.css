@@ -7,8 +7,7 @@
 }
 
 * body {
-  background-image: -webkit-gradient(linear, left top, right top, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), color-stop(indigo), to(violet));
-  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background: blue;
   min-height: 100vh;
   position: relative;
 }
@@ -162,13 +161,20 @@
 }
 
 * body .wrapper {
+  margin-bottom: 5px;
   z-index: 1;
-  margin: 100px auto;
+  margin: 60px auto;
   max-width: 1000px;
   border: 1px solid black;
   min-height: 100vh;
   border-radius: 10px 0 10px 0;
   background: white;
+}
+
+@media (min-width: 110px) {
+  * body .wrapper {
+    margin: 50px auto;
+  }
 }
 
 * body .wrapper #change-color {
@@ -220,9 +226,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px auto 20px auto;
+  margin: 15px auto 10px auto;
   background: green;
-  height: 40px;
+  height: 30px;
   width: 80%;
   color: orange;
   border-radius: 15px;
@@ -236,16 +242,17 @@
 
 * body .wrapper .container {
   max-width: 800px;
-  margin: auto;
+  margin: 5px auto;
   padding: 10px;
 }
 
 * body .wrapper .container .txtb {
+  margin-top: 15px;
   width: 100%;
   border: none;
   border-bottom: 2px solid orangered;
   background: none;
-  padding: 10px;
+  padding: 3px auto;
   outline: none;
   color: green;
   font-size: 1.2rem;
@@ -253,6 +260,7 @@
 
 * body .wrapper .container .notcomp {
   margin-top: 10px;
+  margin-bottom: 20px;
   background: green;
   border-radius: 10px 0 10px 0;
   max-height: 50vh;
